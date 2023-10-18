@@ -1,0 +1,3 @@
+The demo data consist of a normalized h5ad matrix of myeloid cells obtained from: "Mei, Y., Wang, X., Zhang, J. et al. Siglec-9 acts as an immune-checkpoint molecule on macrophages in glioblastoma, restricting T-cell priming and immunotherapy response. Nat Cancer 4, 1273–1291 (2023). https://doi.org/10.1038/s43018-023-00598-9".
+
+If the software is set up well, by uploading the demo input "Calculate_Usage_Myeloid.norm_counts.h5ad" you should obtain an output similar to the one in this folder "output_data_.txt".
