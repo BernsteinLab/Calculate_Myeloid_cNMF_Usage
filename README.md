@@ -52,13 +52,16 @@ shiny::runApp()
 # Input:
 
 1- Make sure that the cells in the input are myeloid in nature.
+
 2- Scanpy generated h5ad is highly recommended.
+
 3- The values in adata.X should be normalized (It is recommended to use sc.pp.normalize_per_cell)
 
 
 # Output:
 
 1-The output is a data frame in which the rows denote cells existing in the input h5ad matrix, whereas the columns represent the indicated consensus myeloid cNMF programs in human gliomas.
+
 2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE RAW AND SHOULD BE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS
 
 # Contact:
