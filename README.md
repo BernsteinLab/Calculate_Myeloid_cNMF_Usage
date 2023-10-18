@@ -59,7 +59,7 @@ shiny::runApp()
 7- Upload the normalized h5ad matrix by clicking on browse and wait for the Calculating usage bar to complete. (It should take a few minutes, depending on the size of the matrix).
 
 
-8- Then click Download Output Data to download the calculated usages.
+8- Then click on "Download Output Data" to download the calculated usages.
 
 # Input:
 
