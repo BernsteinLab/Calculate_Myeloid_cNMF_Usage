@@ -56,7 +56,7 @@ shiny::runApp()
 6- An interactive toolbox will be generated if everything is set up well.
 
 
-7- Upload the normalized h5ad matrix by clicking on browse and wait for the Calculating usage bar to complete. (It should take a few minutes, depending on the size of the matrix).
+7- Upload the normalized h5ad matrix by clicking on browse and wait for the "Calculating usage" bar to complete. (It should take a few minutes, depending on the size of the matrix).
 
 
 8- Then click on "Download Output Data" to download the calculated usages.
@@ -67,7 +67,9 @@ shiny::runApp()
 
 2- Scanpy generated h5ad is highly recommended.
 
-3- The values in adata.X should be normalized (It is recommended to use sc.pp.normalize_per_cell)
+3- The values in adata.X should be normalized (It is recommended to use sc.pp.normalize_per_cell).
+
+4- Genes should be stored as official gene symbols (HGNC official gene symbols).
 
 
 # Output:
@@ -75,6 +77,10 @@ shiny::runApp()
 1-The output is a data frame in which the rows denote cells existing in the input h5ad matrix, whereas the columns represent the indicated consensus myeloid cNMF programs in human gliomas.
 
 2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE RAW AND SHOULD BE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS
+
+# Demo Data:
+
+Instructions for using the demo data are included inside the "Demo Data" folder.
 
 # Contact:
 
