@@ -3,7 +3,7 @@ This shiny app receives a normalized h5ad matrix of myeloid cells and calculates
 
 
 The online version of this tool is available at: 
-https://chadi-elfarran.shinyapps.io/shinyapp/
+https://[chadi-elfarran.shinyapps.io/shinyapp/](https://consensus-myeloid-program-calculator.shinyapps.io/shinyapp/)
 
 However, it is recommended to download this app to avoid server delays and if you have large matrices.
 
