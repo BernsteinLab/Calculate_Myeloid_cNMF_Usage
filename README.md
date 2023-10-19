@@ -9,7 +9,7 @@ However, it is recommended to download this app to avoid server delays and if yo
 
 The use of this tool is simple: Make sure to install all the required dependencies and follow the instructions below.
 
-# Dependencies:
+## Dependencies:
 R > 4.0 (The latest version of RStudio is highly recommended)
 
 Python > 3.7
@@ -22,17 +22,17 @@ shinyFiles
 
 reticulate
 
-# App Setup:
+## App Setup:
 
 1- Install the required R libraries (Needs to be done one time in each system):
 
-install.packages("shiny")
+>install.packages("shiny")
 
-install.packages("shinyFiles")
+>install.packages("shinyFiles")
 
-install.packages("reticulate")
+>install.packages("reticulate")
 
-reticulate::install_python(version = '3.9')
+>reticulate::install_python(version = '3.9')
 
 
 2- Download the three required files ("app.R", "Myeloid_NMF_Average_Gene_Spectra.txt", and "your_python_script_module.py") (Located in the "Required Files" folder) and place them together in one folder (This folder should be your working directory in R when you want to use the app).  Make sure you download the files properly through github (DO NOT right click on the file to download it).   
@@ -43,14 +43,14 @@ reticulate::install_python(version = '3.9')
 
 4- Load the required libraries as follows:
 
-library(shiny)
+>library(shiny)
 
-library(shinyFiles)
+>library(shinyFiles)
 
 
 5- Then type the following in R:
 
-shiny::runApp()
+>shiny::runApp()
 
 
 6- An interactive toolbox will be generated if everything is set up well.
@@ -61,7 +61,7 @@ shiny::runApp()
 
 8- Then click on "Download Output Data" to download the calculated usages.
 
-# Input:
+## Input:
 
 1- Make sure that the cells in the input are myeloid in nature.
 
@@ -72,17 +72,17 @@ shiny::runApp()
 4- Genes should be stored as official gene symbols (HGNC official gene symbols).
 
 
-# Output:
+## Output:
 
 1-The output is a data frame in which the rows denote cells existing in the input h5ad matrix, whereas the columns represent the indicated consensus myeloid cNMF programs in human gliomas.
 
-2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE RAW AND SHOULD BE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS
+**2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE RAW AND SHOULD BE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS**
 
-# Demo Data:
+## Demo Data:
 
 Instructions for using the demo data are included inside the "Demo Data" folder.
 
-# Contact:
+## Contact:
 
 This shiny app is developed and maintained by Chadi A. El Farran, Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
 
