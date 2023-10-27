@@ -15,24 +15,21 @@ ui <- fluidPage(
       downloadButton("download_output", "Download Output Data"),
       tags$style(HTML("
     p {
-      margin-bottom: 30px
+      margin-bottom: 40px
     }
   ")),
     ),
     mainPanel(
 	h1("Welcome to the cNMF program usage calculator for glioma-associated myeloid cells"),
-	h2("Instructions:"),
-	p("1. Upload gene expression matrix of myeloid cells"),
-        p("   a. The matrix should be in h5ad format"),
-        p("   b. The matrix should be normalized (recommend performing sc.pp.normalize_per_cell)"), 
+	h3("Instructions:"),
+        p(),
+	 p("1. Upload gene expression matrix of myeloid cells",HTML("<br>"),"a. The matrix should be in h5ad format",HTML("<br>"),"b. The matrix should be normalized",HTML("<br>"),"c. You can view an example of generating a myeloid h5ad matrix by clicking",HTML("<a href='https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html'>here</a> and following the steps until you annotate the clusters. Then type the following:"),HTML("<br>"),"adata_myeloid = adata[adata.obs['leiden']=='myeloid',:]",HTML("<br>"),"adata.write_h5ad('Myeloid_Matrix.h5ad')"),
 p("2. Once file is loaded, usage calculation will begin automatically"),
-p("3. Once the ,Calculating Usages, process is completed, download the file by clicking (Download Output Data)"),
-p("   a. The output is raw and should be normalized to percentages per cell to compare across cells"),
-p("4. Normalize data by dividing each program usage score per cell by the sum of all usage scores for that cell"),
-       
-h4("If you would like to run this program locally (may be needed for large matrices), you can download the program by", HTML("clicking <a href='https://github.com/BernsteinLab/Calculate_Myeloid_cNMF_Usage'>here</a> to visit GitHub page of the tool."),),
-p(""),
-h5("If you use this tool, please cite: Tyler E Miller, Chadi Abdul Kader El Farran, Charles P Couturier, et al., Programs, Origins, and Niches of Immunomodulatory Myeloid Cells in Gliomas. bioRxiv 2023.10.24.563466; doi: https://doi.org/10.1101/2023.10.24.563466")
+p("3. Once the 'Calculating Usages' process is completed, download the file by clicking 'Download Output Data'",HTML("<br>"),"    a. The output is automatically normalized by dividing each program usage score per cell by the sum of all usage scores for that cell and converting the values into percentages"),
+p(),
+h4("If you would like to run this program locally (may be needed for large matrices), you can download the program by", HTML("clicking <a href='https://github.com/BernsteinLab/Calculate_Myeloid_cNMF_Usage'>here</a> to visit the GitHub page of the tool.")),
+p(),
+h4("If you use this tool, please cite: Tyler E Miller, Chadi Abdul Kader El Farran, Charles P Couturier, et al., Programs, Origins, and Niches of Immunomodulatory Myeloid Cells in Gliomas. bioRxiv 2023.10.24.563466; doi:",  HTML("<a href='https://doi.org/10.1101/2023.10.24.563466'>https://doi.org/10.1101/2023.10.24.563466</a>"))
     )
   )
 )
