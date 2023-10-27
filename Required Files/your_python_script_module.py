@@ -34,6 +34,10 @@ def process_data(data_file_path):
 
 	print("Calculation Completed...")
 
-	processed_data = pd.DataFrame(test2[0], columns= H.columns, index=X.obs.index)
+	processed = pd.DataFrame(test2[0], columns= H.columns, index=X.obs.index)
+
+	row_sums = processed.sum(axis=1)
+
+	processed_data = (processed.div(row_sums, axis=0) * 100)
 
 	return processed_data
