@@ -89,7 +89,7 @@ Instructions for using the demo data are included inside the "Demo Data" folder.
 
 ## Contact:
 
-This shiny app is developed and maintained by Chadi A. El Farran, Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
+This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
 
 If you use this tool, please cite:
 
