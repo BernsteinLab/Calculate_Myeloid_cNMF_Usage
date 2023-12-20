@@ -71,12 +71,17 @@ reticulate
 
 4- Genes should be stored as official gene symbols (HGNC official gene symbols).
 
+Details are provided in the interactive toolbox
+
 
 ## Output:
 
 1-The output is a data frame in which the rows denote cells existing in the input h5ad matrix, whereas the columns represent the indicated consensus myeloid cNMF programs in human gliomas.
 
-**2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE RAW AND SHOULD BE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS**
+**2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS**
+
+Details are provided in the interactive toolbox
+
 
 ## Demo Data:
 
