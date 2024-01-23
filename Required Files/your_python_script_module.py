@@ -24,9 +24,11 @@ def process_data(data_file_path):
 
 	H3 = H2.filter(items = X3.columns)
 
+	X4 = X3.filter(items = H3.columns)
+
 	H4 = H3.to_numpy()
 
-	X5 = X2.astype(np.float64)
+	X5 = X4.astype(np.float64)
 
 	test = sklearn.decomposition.non_negative_factorization(X5, W=None, H=H4, n_components= 14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
 
