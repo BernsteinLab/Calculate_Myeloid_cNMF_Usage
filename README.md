@@ -5,7 +5,7 @@ This shiny app receives a normalized h5ad matrix of myeloid cells and calculates
 The online version of this tool is available at: 
 [(https://consensus-myeloid-program-calculator.shinyapps.io/shinyapp/)]
 
-However, it is recommended to download this app to avoid server delays and if you have large matrices.
+However, it is recommended that you download this app to avoid server delays and if you have large matrices.
 
 The use of this tool is simple: Make sure to install all the required dependencies and follow the instructions below.
 
@@ -35,7 +35,7 @@ reticulate
 >reticulate::install_python(version = '3.9')
 
 
-2- Download the three required files (**"app.R"**, **"Myeloid_NMF_Average_Gene_Spectra.txt"**, and **"your_python_script_module.py"**) (Located in the "Required Files" folder) and **place them together in one folder** (This folder should be your working directory in R when you want to use the app).  Make sure you download the files properly through github (DO NOT right click on the file to download it).   
+2- Download the three required files (**"app.R"**, **"Myeloid_NMF_Average_Gene_Spectra.txt"**, and **"your_python_script_module.py"**) (Located in the "Required Files" folder) and **place them together in one folder** (This folder should be your working directory in R when you want to use the app). Ensure you download the files correctly through Git Hub (DO NOT right-click on the file to download it).   
 
 
 3- Start your R session and set the working directory to the folder mentioned above in step 2 using setwd().
@@ -56,22 +56,24 @@ reticulate
 6- An interactive toolbox will be generated if everything is set up well.
 
 
-7- Upload the normalized h5ad matrix by clicking on browse and wait for the "Calculating usage" bar to complete. (It should take a few minutes, depending on the size of the matrix).
+7—Upload the normalized h5ad matrix by clicking on browse and waiting for the "Calculating usage" bar to complete. (It should take a few minutes, depending on the size of the matrix.)
 
 
-8- Then click on "Download Output Data" to download the calculated usages.
+8- Click "Download Output Data" to download the calculated usage.
 
 ## Input:
 
-1- Make sure that the cells in the input are myeloid in nature.
+1- Choose the mode. "Annotation Mode" calculates the enrichment of cell types NMF programs to help you annotate the Cells. Myeloid Program Calculation Mode calculates the usages of the consensus cNMF programs in glioma-associated myeloid cells. Upload gene expression matrix of myeloid cells for Myeloid Program Calculation Mode.
+a. Choose the input format after choosing the mode. The matrix should be in h5ad or csv. For CSV, genes should be in rows and cells in columns.
+b. The matrix can be normalized or raw.
 
 2- Scanpy generated h5ad is highly recommended.
 
-3- The values in adata.X should be normalized (It is recommended to use sc.pp.normalize_per_cell).
+3- The values in adata.X can be normalized (It is recommended to use sc.pp.normalize_per_cell) or raw.
 
 4- Genes should be stored as official gene symbols (HGNC official gene symbols).
 
-Details are provided in the interactive toolbox
+Details are provided in the interactive toolbox.
 
 
 ## Output:
@@ -80,19 +82,15 @@ Details are provided in the interactive toolbox
 
 **2- IT IS IMPORTANT TO NOTE THAT THE USAGE VALUES IN THE OUTPUT ARE NORMALIZED AS PERCENTAGES PER CELL TO ENABLE COMPARISON AMONG CELLS**
 
-Details are provided in the interactive toolbox
+Details are provided in the interactive toolbox.
 
 
 ## Demo Data:
 
-Instructions for using the demo data are included inside the "Demo Data" folder.
+Instructions for using the demo data are included in the "Demo Data" folder.
 
 ## Contact:
 
 This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
 
 If you use this tool, please cite:
-
-
-
-
