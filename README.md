@@ -35,7 +35,7 @@ reticulate
 >reticulate::install_python(version = '3.9')
 
 
-2- Download the three required files (**"app.R"**, **"Myeloid_NMF_Average_Gene_Spectra.txt"**, and **"your_python_script_module.py"**) (Located in the "Required Files" folder) and **place them together in one folder** (This folder should be your working directory in R when you want to use the app). Ensure you download the files correctly through Git Hub (DO NOT right-click on the file to download it).   
+2- Download the four required files (**"app.R"**, **"Myeloid_NMF_Average_Gene_Spectra.txt"**, **"cnmf_run.spectra.k_18.dt_0_015.consensus.df.npz"**, and **"your_python_script_module.py"**) (Located in the "Required Files" folder) and **place them together in one folder** (This folder should be your working directory in R when you want to use the app). Ensure you download the files correctly through Git Hub (DO NOT right-click on the file to download it).   
 
 
 3- Start your R session and set the working directory to the folder mentioned above in step 2 using setwd().
