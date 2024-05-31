@@ -2,8 +2,9 @@ library(shiny)
 library(reticulate)
 
 # Use the virtual environment
-use_virtualenv("myenv", required = TRUE)
-py <- import("your_python_script_module")  # Ensure this matches your script name
+# Create a Python virtual environment and install required packages
+reticulate::virtualenv_create("myenv")
+reticulate::virtualenv_install("myenv", packages=c("scipy", "scikit-learn==1.0.2", "numpy", "scanpy", "pandas"))
 
 ui <- fluidPage(
   titlePanel("cNMF Program Usage Calculator"),
