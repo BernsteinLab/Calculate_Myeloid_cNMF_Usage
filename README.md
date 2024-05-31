@@ -55,17 +55,19 @@ reticulate
 
 6- An interactive toolbox will be generated if everything is set up well.
 
+7- Choose Annotation mode or Myeloid Calculation mode.
 
-7—Upload the normalized h5ad matrix by clicking on browse and waiting for the "Calculating usage" bar to complete. (It should take a few minutes, depending on the size of the matrix.)
+8— Upload the h5ad, csv or mtx matrix by clicking on browse and waiting for the "Calculating usage" bar to complete. (It should take a few minutes, depending on the size of the matrix.). If you have chosen mtx format, you will need to upload the features and barcodes files which are additional outputs of CellRanger or STARSolo.
 
 
-8- Click "Download Output Data" to download the calculated usage.
+9- Click "Download Output Data" to download the calculated usage.
 
 ## Input:
 
 1- Choose the mode. "Annotation Mode" calculates the enrichment of cell types NMF programs to help you annotate the Cells. Myeloid Program Calculation Mode calculates the usages of the consensus cNMF programs in glioma-associated myeloid cells. Upload gene expression matrix of myeloid cells for Myeloid Program Calculation Mode.
 a. Choose the input format after choosing the mode. The matrix should be in h5ad or csv. For CSV, genes should be in rows and cells in columns.
 b. The matrix can be normalized or raw.
+c. mtx and associated files can be gzipped or uncompressed.
 
 2- Scanpy generated h5ad is highly recommended.
 
