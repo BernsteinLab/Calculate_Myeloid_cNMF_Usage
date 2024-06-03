@@ -65,9 +65,9 @@ reticulate
 ## Input:
 
 1- Choose the mode. "Annotation Mode" calculates the enrichment of cell types NMF programs to help you annotate the Cells. Myeloid Program Calculation Mode calculates the usages of the consensus cNMF programs in glioma-associated myeloid cells. Upload gene expression matrix of myeloid cells for Myeloid Program Calculation Mode.
-a. Choose the input format after choosing the mode. The matrix should be in h5ad or csv. For CSV, genes should be in rows and cells in columns.
+a. Choose the input format after choosing the mode. The matrix should be in mtx, h5ad, or csv formats. For CSV, genes should be in rows and cells in columns. For mtx format, barcodes and feature files have to be uploaded as well. They should be in the format accepted by Scanpy. Feature file has to have three columns, with the second column including gene symbols and the third column having the words Gene Expression in all rows
 b. The matrix can be normalized or raw.
-c. mtx and associated files can be gzipped or uncompressed.
+c. mtx and associated files can be gzipped or uncompressed. Uploading a gzipped mtx file is highly recommended as it saves time.
 
 2- Scanpy generated h5ad is highly recommended.
 
