@@ -1,5 +1,5 @@
 # Calculate_Myeloid_cNMF_Usage
-This shiny app receives a normalized h5ad matrix of myeloid cells and calculates the usage of the consensus myeloid cNMF programs in gliomas by the cells in the uploaded h5ad matrix.
+This shiny app receives a gene expression matrix and calculates the usage of the cell annotation cNMF programs, and the consensus myeloid cNMF programs in gliomas.
 
 
 The online version of this tool is available at: 
