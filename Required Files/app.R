@@ -1,10 +1,20 @@
 library(shiny)
 library(reticulate)
 
+# Check if virtual environment exists, if not create it and install required packages
+if (!reticulate::virtualenv_exists("myenv")) {
+  reticulate::virtualenv_create("myenv")
+  reticulate::virtualenv_install("myenv", packages = c("scipy", "scikit-learn==1.0.2", "numpy", "scanpy", "pandas"))
+}
+
 # Use the virtual environment
-# Create a Python virtual environment and install required packages
-reticulate::virtualenv_create("myenv")
-reticulate::virtualenv_install("myenv", packages=c("scipy", "scikit-learn==1.0.2", "numpy", "scanpy", "pandas"))
+reticulate::use_virtualenv("myenv", required = TRUE)
+
+# Ensure the Python script module is imported correctly
+py <- NULL
+try({
+  py <- import("your_python_script_module", convert = TRUE)
+}, silent = TRUE)
 
 ui <- fluidPage(
   titlePanel("cNMF Program Usage Calculator"),
@@ -48,6 +58,15 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   options(shiny.maxRequestSize = 30000 * 1024 ^ 2)
+  
+  if (is.null(py)) {
+    output$mainPanel <- renderUI({
+      tagList(
+        h3("Error: Python module not found. Please check the virtual environment setup.")
+      )
+    })
+    return(NULL)
+  }
 
   output$file_input_ui <- renderUI({
     if (input$input_format == "mtx") {
@@ -62,7 +81,9 @@ server <- function(input, output, session) {
   })
 
   observe({
+    print("Observe triggered")
     if (input$input_format == "mtx" && !is.null(input$mtx_file) && !is.null(input$barcodes_file) && !is.null(input$features_file)) {
+      print("MTX format detected")
       mtx_file_path <- input$mtx_file$datapath
       barcodes_file_path <- input$barcodes_file$datapath
       features_file_path <- input$features_file$datapath
@@ -111,6 +132,7 @@ server <- function(input, output, session) {
         }
       )
     } else if (!is.null(input$data_file)) {
+      print("Non-MTX format detected")
       data_file_path <- input$data_file$datapath
       print(paste("Data file path:", data_file_path))
 
