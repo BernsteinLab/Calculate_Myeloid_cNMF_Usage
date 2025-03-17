@@ -1,10 +1,12 @@
 library(shiny)
 library(reticulate)
 
+
 # Check if virtual environment exists, if not create it and install required packages
 if (!reticulate::virtualenv_exists("myenv")) {
   reticulate::virtualenv_create("myenv")
-  reticulate::virtualenv_install("myenv", packages = c("scipy", "scikit-learn==1.0.2", "numpy", "scanpy", "pandas"))
+  reticulate::virtualenv_install("myenv", packages = c("cnmf", "scanpy", "pandas", "numba"))
+
 }
 
 # Use the virtual environment
@@ -14,7 +16,7 @@ reticulate::use_virtualenv("myenv", required = TRUE)
 py <- NULL
 try({
   py <- import("your_python_script_module", convert = TRUE)
-}, silent = TRUE)
+}, silent = FALSE)
 
 ui <- fluidPage(
   titlePanel("cNMF Program Usage Calculator"),
@@ -50,15 +52,18 @@ ui <- fluidPage(
       h4("If you would like to run this program locally (may be needed for large matrices), you can download the program by",
         HTML("clicking <a href='https://github.com/BernsteinLab/Calculate_Myeloid_cNMF_Usage'>here</a> to visit the GitHub page of the tool.")),
       p(),
-      h4("This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.",
-        HTML("<br>"), "If you use this tool, please cite: Tyler E Miller, Chadi Abdul Kader El Farran, Charles P Couturier, et al., Programs, Origins, and Niches of Immunomodulatory Myeloid Cells in Gliomas. bioRxiv 2023.10.24.563466; doi:",
-        HTML("<a href='https://doi.org/10.1101/2023.10.24.563466'>https://doi.org/10.1101/2023.10.24.563466</a>"))
+      h4("This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (Chadi.ElFarran@stjude.org), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.",
+        HTML("<br>"), "If you use this tool, please cite: Miller, T.E., El Farran, C.A., Couturier, C.P. et al. Programs, origins and immunomodulatory functions of myeloid cells in glioma. Nature (2025); doi:",
+        HTML("<a href='https://doi.org/10.1038/s41586-025-08633-8'>https://doi.org/10.1038/s41586-025-08633-8</a>"))
     )
   )
 )
 
 server <- function(input, output, session) {
   options(shiny.maxRequestSize = 30000 * 1024 ^ 2)
+
+Sys.setenv(LD_LIBRARY_PATH = "/opt/homebrew/opt/zlib/lib:/usr/local/lib")
+Sys.setenv(DYLD_LIBRARY_PATH = "/opt/homebrew/opt/zlib/lib:/usr/local/lib")
   
   log_file <- tempfile(fileext = ".txt")
   
