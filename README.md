@@ -93,6 +93,8 @@ Instructions for using the demo data are included in the "Demo Data" folder.
 
 ## Contact:
 
-This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (ChadiA_ElFarran@dfci.harvard.edu), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
+This shiny app is developed and maintained by Chadi A. El Farran, M.Sc., Ph.D. (Chadi.ElFarran@stjude.org), with significant contributions from Charles P. Couturier, MD, Ph.D., and Tyler E. Miller, MD, Ph.D.
 
 If you use this tool, please cite:
+
+Miller, T.E., El Farran, C.A., Couturier, C.P. et al. Programs, origins and immunomodulatory functions of myeloid cells in glioma. Nature (2025). https://doi.org/10.1038/s41586-025-08633-8
