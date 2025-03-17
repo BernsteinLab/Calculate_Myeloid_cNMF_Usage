@@ -41,7 +41,7 @@ def process_annotation_h5ad_data(data_file_path):
 
     X6 = X5.astype(np.float64)
 
-    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
@@ -79,7 +79,7 @@ def process_annotation_csv_data(data_file_path):
     
     X6 = X5.astype(np.float64)
 
-    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
@@ -159,7 +159,7 @@ def process_annotation_mtx_data(mtx_file_path, barcodes_file_path, features_file
     
     X6 = X5.astype(np.float64)
 
-    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X6, W=None, H=H4, n_components=18, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
@@ -200,7 +200,7 @@ def process_myeloid_program_h5ad_data(data_file_path):
 
     X6 = X5.astype(np.float64)
 
-    test = non_negative_factorization(X6, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X6, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
@@ -235,7 +235,7 @@ def process_myeloid_program_csv_data(data_file_path):
 
     X5 = X4.astype(np.float64)
 
-    test = non_negative_factorization(X5, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X5, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
@@ -308,7 +308,7 @@ def process_myeloid_program_mtx_data(mtx_file_path, barcodes_file_path, features
 
     X6 = X5.astype(np.float64)
 
-    test = non_negative_factorization(X6, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha=0.0, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, regularization=None, random_state=None, verbose=0, shuffle=False)
+    test = non_negative_factorization(X6, W=None, H=H4, n_components=14, init='random', update_H=False, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=1000, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, random_state=None, verbose=0, shuffle=False)
 
     test2 = list(test)
 
