@@ -40,7 +40,7 @@ ui <- fluidPage(
       p(),
       p("1. Choose the mode. Annotation Mode calculates the enrichment of cell types NMF programs to help you annotate the Cells. Myeloid Program Calculation Mode calculates the usages of the consensus cNMF programs in glioma-associated myeloid cells. Upload gene expression matrix of myeloid cells for Myeloid Program Calculation Mode",
         HTML("<br>"), "a. Choose input format after choosing the mode. The matrix should be in h5ad, csv, or mtx. For CSV, genes should be in rows and cells in columns. For mtx, you should upload the associated barcodes and feature files, which are outputs of CellRanger or STARSolo. Feature file has to have three columns, with the second column including gene symbols and the third column having the words Gene Expression in all rows",
-        HTML("<br>"), "b. The matrix can be normalized or raw. mtx and associated files can be gz compressed or uncompressed. To make the process faster, upload gzipped mtx file",
+        HTML("<br>"), "b. The matrix should be normalized. mtx and associated files can be gz compressed or uncompressed. To make the process faster, upload gzipped mtx file",
         HTML("<br>"), "c. You can view an example of generating a myeloid h5ad matrix by clicking",
         HTML("<a href='https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html'>here</a> and following the steps until you annotate the clusters. Then type the following:"),
         HTML("<br>"), "adata_myeloid = adata[adata.obs['leiden']=='myeloid',:]",
